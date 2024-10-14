@@ -10,4 +10,24 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    lib: {
+      entry: path.resolve(__dirname, "src/VoiceBotWeb.tsx"),
+      name: "ZaplineVoiceBot",
+      formats: ["es", "umd"],
+      fileName: (format) => `zapline-voice-bot.${format}.js`,
+    },
+    rollupOptions: {
+      external: ["react", "react-dom"],
+      output: {
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+        },
+      },
+    },
+    target: "esnext",
+    minify: "terser",
+    sourcemap: true,
+  },
 });
