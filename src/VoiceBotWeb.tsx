@@ -18,4 +18,4 @@ class VoiceBotWebComponent extends HTMLElement {
   }
 }
 
-customElements.define("zapline-voice-bot", VoiceBotWebComponent);
+export default VoiceBotWebComponent;

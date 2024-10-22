@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { voiceBotStyles } from "./VoicebotStyles";
+import { voiceBotStyles } from "./VoiceBotStyles";
 
 interface VoiceBotProps {
   id: string;

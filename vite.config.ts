@@ -4,6 +4,11 @@ import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  define: {
+    "process.env": {
+      NODE_ENV: "production",
+    },
+  },
   plugins: [react()],
   resolve: {
     alias: {
@@ -12,22 +17,10 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/VoiceBotWeb.tsx"),
-      name: "ZaplineVoiceBot",
-      formats: ["es", "umd"],
-      fileName: (format) => `zapline-voice-bot.${format}.js`,
-    },
-    rollupOptions: {
-      external: ["react", "react-dom"],
-      output: {
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-        },
-      },
+      entry: "./src/index.tsx",
+      name: "widget",
+      fileName: (format) => `widget.${format}.js`,
     },
     target: "esnext",
-    minify: "terser",
-    sourcemap: true,
   },
 });
