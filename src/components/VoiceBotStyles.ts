@@ -1,78 +1,76 @@
 export const voiceBotStyles = `
-  :host {
-    all: initial;
-    display: block;
-    font-family: sans-serif;
-  }
-  .card {
-    width: 350px;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    background-color: white;
-  }
-  .card-header {
-    padding: 1.5rem;
-    border-bottom: 1px solid #e5e7eb;
-  }
-  .card-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-  }
-  .card-content {
-    padding: 1.5rem;
-  }
-  .card-footer {
-    padding: 1.5rem;
-    border-top: 1px solid #e5e7eb;
-  }
-  .response-area {
-    height: 150px;
-    overflow-y: auto;
-    background-color: #f3f4f6;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    margin-bottom: 1rem;
-  }
-  .transcript-area {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .transcript {
-    flex-grow: 1;
-    background-color: #f3f4f6;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-  }
-  .button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.25rem;
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  .button-primary {
-    background-color: #2563eb;
-    color: white;
-  }
-  .button-primary:hover {
-    background-color: #1d4ed8;
-  }
-  .button-outline {
-    border: 1px solid #d1d5db;
-    background-color: transparent;
-  }
-  .button-outline:hover {
-    background-color: #f3f4f6;
-  }
-  .button-icon {
-    padding: 0.5rem;
-  }
-  .w-full {
-    width: 100%;
-  }
+.zap-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.zap-card-header {
+  margin-bottom: 20px;
+}
+
+.zap-card-title {
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+}
+
+.zap-textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  resize: vertical;
+}
+
+.zap-spectogram {
+  height: 60px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.zap-spectogram-bar {
+  width: 8px;
+  background: #007aff;
+  border-radius: 4px;
+  transition: height 0.1s ease-in-out;
+}
+
+.zap-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.zap-button-primary {
+  background: #007aff;
+  color: white;
+}
+
+.zap-button-primary:hover {
+  background: #0056b3;
+}
+
+.zap-button-primary:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.zap-w-full {
+  width: 100%;
+}
 `;
